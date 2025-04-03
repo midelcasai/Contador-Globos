@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Torneo de Globos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .team {
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .team i {
+      font-size: 50px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .score {
+      font-size: 60px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #444;
+    }
+
+    button {
+      font-size: 22px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #00796b;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    #resetBtn {
+      margin-top: 50px;
+      background-color: #c62828;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+    }
+
+    #resetBtn:hover {
+      background-color: #8e0000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>TORNEO DE GLOBOS</h1>
+
+  <div class="container">
+    <div class="team">
+      <i class="fas fa-vest"></i>
+      <h2>Peto</h2>
+      <div id="scorePeto" class="score">0</div>
+      <button onclick="increment('peto')">+</button>
+    </div>
+
+    <div class="team">
+      <i class="fas fa-tshirt"></i>
+      <h2>Sin Peto</h2>
+      <div id="scoreSinPeto" class="score">0</div>
+      <button onclick="increment('sinPeto')">+</button>
+    </div>
+  </div>
+
+  <button id="resetBtn" onclick="resetScores()">
+    <i class="fas fa-rotate-right"></i>
+  </button>
+
+  <script>
+    let scorePeto = 0;
+    let scoreSinPeto = 0;
+
+    function increment(team) {
+      if (team === 'peto') {
+        scorePeto++;
+        document.getElementById('scorePeto').textContent = scorePeto;
+      } else if (team === 'sinPeto') {
+        scoreSinPeto++;
+        document.getElementById('scoreSinPeto').textContent = scoreSinPeto;
+      }
+    }
+
+    function resetScores() {
+      scorePeto = 0;
+      scoreSinPeto = 0;
+      document.getElementById('scorePeto').textContent = scorePeto;
+      document.getElementById('scoreSinPeto').textContent = scoreSinPeto;
+    }
+  </script>
+
+</body>
+</html>
