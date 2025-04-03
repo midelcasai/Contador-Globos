@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Arial', sans-serif;
       background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
       margin: 0;
       display: flex;
@@ -19,25 +19,27 @@
     }
 
     h1 {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       font-size: 3.5em;
       color: #333;
     }
+    
     h2 {
       margin-bottom: 20px;
       font-size: 2em;
       color: #333;
     }
+    
     .container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 90px;
+      gap: 60px;
     }
 
     .team {
       background-color: white;
-      border-radius: 20px;
+      border-radius: 16px;
       padding: 30px;
       width: 200px;
       text-align: center;
@@ -45,23 +47,23 @@
     }
 
     .team i {
-      font-size: 70px;
+      font-size: 60px;
       margin-bottom: 10px;
       color: #555;
     }
 
     .score {
-      font-size: 100px;
+      font-size: 120px;
       font-weight: bold;
-      margin: 20px 0;
+      margin: 30px 0;
       color: #444;
     }
 
     button {
-      font-size: 22px;
-      padding: 10px 20px;
+      font-size: 60px;
+      padding: 5px 20px;
       border: none;
-      border-radius: 10px;
+      border-radius: 16px;
       background-color: #00796b;
       color: white;
       cursor: pointer;
@@ -73,12 +75,13 @@
     }
 
     #resetBtn {
-      margin-top: 50px;
+      margin-top: 40px;
+      font-size: 50px;
       background-color: #c62828;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 20px;
+      padding: 18px 22px;
     }
 
     #resetBtn:hover {
@@ -95,14 +98,14 @@
       <i class="fas fa-vest"></i>
       <h2>Peto</h2>
       <div id="scorePeto" class="score">0</div>
-      <button onclick="increment('peto')">+</button>
+      <button onclick="increment('peto')">&#43</button>
     </div>
 
     <div class="team">
       <i class="fas fa-tshirt"></i>
       <h2>Sin Peto</h2>
       <div id="scoreSinPeto" class="score">0</div>
-      <button onclick="increment('sinPeto')">+</button>
+      <button onclick="increment('sinPeto')">&#43</button>
     </div>
   </div>
 
